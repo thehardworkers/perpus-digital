@@ -1,9 +1,33 @@
-<mxfile host="app.diagrams.net" modified="2023-10-09T14:23:05.075Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" version="22.0.4" etag="fMcUoxXU5RkbwL_tYdqQ" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-09T14:31:54.268Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="Imh9VmHc9dTUEeIvzDyD" version="22.0.4" type="github">
   <diagram name="Halaman-1" id="EyYEr-YHE3Tl8KsO1yoy">
-    <mxGraphModel>
+    <mxGraphModel dx="1222" dy="702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="cF0LCyZyNcqKgNd1kzj--5" value="MULAI" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="337" y="70" width="153" height="91.8" as="geometry" />
+        </mxCell>
+        <mxCell id="cF0LCyZyNcqKgNd1kzj--8" value="REGISTER/LOGIN" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="328" y="250" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cF0LCyZyNcqKgNd1kzj--9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cF0LCyZyNcqKgNd1kzj--5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="410" as="sourcePoint" />
+            <mxPoint x="414" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cF0LCyZyNcqKgNd1kzj--10" value="MEMINJAM&lt;br&gt;BUKU" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="410" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cF0LCyZyNcqKgNd1kzj--11" value="MEMINJAM&lt;br&gt;BUKU" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="410" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cF0LCyZyNcqKgNd1kzj--12" value="MENGEMBALIKAN&lt;br&gt;BUKU" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="400" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="cF0LCyZyNcqKgNd1kzj--13" value="MEMBACA&lt;br&gt;BUKU" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="410" width="110" height="110" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
