@@ -1,6 +1,7 @@
 <template>
-    <div>
-      <table>
+  <div class="row">
+    <div class="col-lg-10">
+      <table class="table table-hover">
         <thead>
           <tr>
             <th>#</th>
@@ -23,24 +24,27 @@
         </tbody>
       </table>
     </div>
-  </template>
-  
-  <script setup>
-  import { onMounted, ref } from "vue";
-  
-  const supabase = useSupabaseClient();
-  const items = ref([]);
-  async function ambilData() {
-    let { data, error } = await supabase.from("pengunjung").select();
-    if (error) throw error;
-    if (data) items.value = data;
-  }
-  
-  onMounted(() => {
-    ambilData();
-    console.log(supabase);
-  });
-  </script>
-  
-  <style lang="scss" scoped></style>
-  
+    <div class="col-lg">
+        <select name="" id=""></select>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+
+const supabase = useSupabaseClient();
+const items = ref([]);
+async function ambilData() {
+  let { data, error } = await supabase.from("pengunjung").select();
+  if (error) throw error;
+  if (data) items.value = data;
+}
+
+onMounted(() => {
+  ambilData();
+  console.log(supabase);
+});
+</script>
+
+<style lang="scss" scoped></style>
