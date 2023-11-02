@@ -2,21 +2,21 @@
   <div>
     <form @submit.prevent="handleSubmit">
       <div>
-        <input v-model="Nama" type="text" placeholder="Masukan Nama" >
+        <input v-model="Nama" type="text" placeholder="Masukan Nama" required >
       </div>
       <div>
-        <select v-model="Keanggotaan" name="" id="" >
+        <select v-model="Keanggotaan" name="" id=""  required>
           <option value="">Pilih Keanggotaan</option>
           <option value="Guru">Guru</option>
           <option value="Siswa">Siswa</option>
           <option value="Staff">Staff</option>
         </select>
       </div>
-      <div>
-        <input v-model="Kelas" type="text" placeholder="Masukan Kelas" >
+      <div v-if="Keanggotaan == 'Siswa'"> 
+        <input v-model="Kelas" type="text" placeholder="Masukan Kelas" required>
       </div>
       <div>
-        <textarea  v-model="Keperluan" name="" id="" cols="30" rows="10" placeholder="Tulis Keperluan"></textarea>
+        <textarea  v-model="Keperluan" name="" id="" cols="30" rows="10" placeholder="Tulis Keperluan" required></textarea>
       </div>
       <button type="submit">Kirim</button>
     </form>
@@ -45,4 +45,6 @@ async function handleSubmit(){
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>
