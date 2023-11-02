@@ -1,45 +1,48 @@
 <template>
   <div>
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nama</th>
-          <th>Anggota</th>
-          <th>Kelas</th>
-          <th>Keperluan</th>
-          <th>Tanggal</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in items" :key="item.id">
-          <td>{{ item.id }}</td>
-          <td>{{ item.nama }}</td>
-          <td>{{ item.anggota }}</td>
-          <td>{{ item.kelas }}</td>
-          <td>{{ item.keperluan }}</td>
-          <td>{{ item.tanggal }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <form @submit.prevent="handleSubmit">
+      <div>
+        <input v-model="Nama" type="text" placeholder="Masukan Nama" >
+      </div>
+      <div>
+        <select v-model="Keanggotaan" name="" id="" >
+          <option value="">Pilih Keanggotaan</option>
+          <option value="Guru">Guru</option>
+          <option value="Siswa">Siswa</option>
+          <option value="Staff">Staff</option>
+        </select>
+      </div>
+      <div>
+        <input v-model="Kelas" type="text" placeholder="Masukan Kelas" >
+      </div>
+      <div>
+        <textarea  v-model="Keperluan" name="" id="" cols="30" rows="10" placeholder="Tulis Keperluan"></textarea>
+      </div>
+      <button type="submit">Kirim</button>
+    </form>
   </div>
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+const supabase = useSupabaseClient()
+const Nama = ref("")
+const Keanggotaan = ref("")
+const Kelas = ref("")
+const Keperluan = ref("")
 
-const supabase = useSupabaseClient();
-const items = ref([]);
-async function ambilData() {
-  let { data, error } = await supabase.from("pengunjung").select();
-  if (error) throw error;
-  if (data) items.value = data;
+async function handleSubmit(){
+  const {error} = await supabase
+    .from('pengunjung')
+    .insert([{
+      nama:Nama.value,
+      anggota:Keanggotaan.value,
+      kelas:Kelas.value,
+      keperluan:Keperluan.value
+    }])
+
+    if(!error) navigateTo('/kunjungan')
+    else throw error
 }
-
-onMounted(() => {
-  ambilData();
-  console.log(supabase);
-});
 </script>
 
 <style lang="scss" scoped></style>
