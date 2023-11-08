@@ -2,11 +2,13 @@
   <div>
     <div class="row justify-content-center">
       <div class="col-lg-4">
-        <h2 class="my-3">Isi Buku Kunjungan</h2>
+        <h1 class="">Isi Buku Kunjungan</h1>
         <form @submit.prevent="handleSubmit">
-          <div class="mb-3">
-            <input v-model="Nama" type="text" class="form-control" placeholder="Masukan Nama" required />
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">k</span>
+            <input v-model="Nama" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" />
           </div>
+          <br />
           <div class="mb-3">
             <select v-model="Keanggotaan" class="form-control" name="" id="" required>
               <option value="">Pilih Keanggotaan</option>
